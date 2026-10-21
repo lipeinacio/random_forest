@@ -1,0 +1,78 @@
+{
+  "raw_rows": 284807,
+  "raw_columns": 31,
+  "input_features": 30,
+  "raw_class_counts": {
+    "0": 284315,
+    "1": 492
+  },
+  "missing_values": 0,
+  "duplicates_removed": 1081,
+  "duplicates_removed_by_class": {
+    "0": 1062,
+    "1": 19
+  },
+  "clean_rows": 283726,
+  "clean_class_counts": {
+    "0": 283253,
+    "1": 473
+  },
+  "categorical_features": [],
+  "normalization": "Nao aplicada: ambos os modelos dividem cada variavel por limiares; escala considerada.",
+  "outlier_policy": "Investigar por IQR no treino; preservar extremos, pois podem ser sinais de fraude.",
+  "amount_train": {
+    "0": {
+      "n": 169951,
+      "media": 88.10928491153334,
+      "mediana": 22.05,
+      "p95": 363.0,
+      "maximo": 19656.53
+    },
+    "1": {
+      "n": 284,
+      "media": 118.86778169014083,
+      "mediana": 11.855,
+      "p95": 565.1079999999986,
+      "maximo": 2125.87
+    }
+  },
+  "top_class_gaps": {
+    "V17": 7.833504181706595,
+    "V14": 7.318173930539419,
+    "V12": 6.1434686462655765,
+    "V10": 5.097640240142441,
+    "V3": 4.632062053150977
+  },
+  "largest_correlation": {
+    "feature_a": "V2",
+    "feature_b": "Amount",
+    "value": -0.5386120843573959
+  },
+  "time_range_seconds": [
+    0.0,
+    172792.0
+  ],
+  "splits": {
+    "treino": {
+      "rows": 170235,
+      "frauds": 284
+    },
+    "validacao": {
+      "rows": 56745,
+      "frauds": 94
+    },
+    "teste": {
+      "rows": 56746,
+      "frauds": 95
+    }
+  },
+  "sha256": "76274b691b16a6c49d3f159c883398e03ccd6d1ee12d9d8ee38f4b4b98551a89",
+  "leakage_checks": {
+    "target_excluded": true,
+    "row_ids_disjoint": true,
+    "feature_hashes_disjoint": true,
+    "eda_train_only": true,
+    "test_evaluated": false,
+    "original_pca_fit_scope": "Nao informado pelos autores; transformacao ja fornecida."
+  }
+}

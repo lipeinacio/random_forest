@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+data/*.csv
+data/*.zip
+.env
+kaggle.json
+.DS_Store
+results/divisao.csv
+results/predicoes_validacao.csv
