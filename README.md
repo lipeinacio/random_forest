@@ -6,6 +6,12 @@ O primeiro pipeline executa auditoria, preparação, treino, avaliação na vali
 e previsão. Objetivo: apoiar a triagem de transações suspeitas e comparar
 Random Forest com uma Árvore de Decisão, equilibrando fraudes identificadas e alertas falsos.
 
+## Roteiro para explicar ao professor
+
+Leia o [guia resumido](docs/05_Guia_Explicacao_Professor.pdf), com fala de 4 a 5 minutos,
+perguntas e respostas e cinco artigos científicos identificados.
+O roteiro acompanha o README: objetivo, dataset, execução, resultados e limitações.
+
 ## Integrantes e entregas definidas pelo grupo
 
 | Integrante | Entrega | Apresentação |
@@ -123,7 +129,7 @@ A aplicação é educacional e não autoriza bloqueios reais.
 - [Rascunho do resumo expandido](docs/02_Rascunho_Resumo_Expandido.pdf)
 - [Autoverificação do checklist](docs/03_Checklist_Preenchido.pdf)
 - [Diário de IA iniciado](docs/04_Diario_IA_Iniciado.pdf)
-- [Seis referências com contribuições](docs/referencias.md)
+- [Cinco artigos científicos e três fontes de apoio](docs/referencias.md)
 - [Guia para entrega e ensaio](docs/LEIA_PRIMEIRO.md)
 
 Os PDFs têm versões textuais editáveis em Markdown. O resumo é um rascunho para

@@ -36,4 +36,16 @@ https://scikit-learn.org/stable/common_pitfalls.html
 
 Contribuição: Orienta a separação dos dados e a prevenção de vazamento.
 
-Foram selecionadas seis referências, das quais três são artigos científicos. A seleção não equivale à leitura integral pelos integrantes; cada um deve revisar as fontes relevantes à sua parte.
+[7] BREIMAN, L. Bagging predictors. Machine Learning, v. 24, p. 123-140, 1996.
+
+https://doi.org/10.1007/BF00058655
+
+Contribuição: Artigo científico. Apresenta a combinação de modelos treinados com amostras bootstrap. Ajuda a explicar a amostragem com reposição e a agregação que fazem parte da floresta.
+
+[8] PEDREGOSA, F. et al. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, v. 12, n. 85, p. 2825-2830, 2011.
+
+https://www.jmlr.org/papers/v12/pedregosa11a.html
+
+Contribuição: Artigo científico. Apresenta a biblioteca utilizada para implementar os classificadores e as métricas. A configuração atual do código deve ser conferida na documentação da versão executada.
+
+Foram selecionadas oito referências: cinco artigos científicos e três fontes de apoio. Os três primeiros artigos fundamentam a técnica, as métricas e o contexto de fraude; os dois adicionais fundamentam bagging e a biblioteca utilizada.
