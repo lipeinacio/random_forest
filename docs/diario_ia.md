@@ -80,7 +80,3 @@ Resposta: SSH retornou Permission denied (publickey); acesso HTTPS funcionou e o
 Validação: git ls-remote e git clone por HTTPS, sem expor credenciais.
 
 Uso e revisão: Conferir a publicação e o convite ao professor. Não registrar tokens ou chaves no diário.
-
-## Reflexão do grupo
-
-Preencher após revisão: uso da resposta, alterações, erros percebidos, utilidade, confiança antes da validação, compreensão e aprendizado. Não inventar avaliações retrospectivas.
