@@ -1,10 +1,14 @@
 # Diário de uso de IA generativa
 
-Grupo 3 | 20/10/2026
+Grupo 3 | Registros iniciados em 20/10/2026 | Revisão em 27/10/2026
 
-Ferramenta: Codex; fornecedor: OpenAI; modelo/versão exibida: não informado; acesso: aplicativo. Horários dos prompts não registrados.
+Ferramenta: aplicativo Codex. Fornecedor: OpenAI. Modelo/versão exibida: não informado neste registro. Forma de acesso: aplicativo.
 
-Este registro descreve as ações verificáveis da IA. A adoção das respostas, a utilidade percebida e a reflexão pertencem ao grupo e precisam ser revisadas por ele.
+Este diário registra o apoio da IA no desenvolvimento do projeto, as verificações técnicas realizadas e a participação do grupo na visualização, discussão e aprovação dos materiais. A revisão do grupo e o aprendizado relatado foram registrados em 27/10/2026.
+
+Integrantes: Felipe Inácio de Paula; Gabriel Damante Frias; Maicon Manoel Rodrigues dos Santos; André Luiz Jeremias Pereira Junior; Lavinia Zanata Alves
+
+Horários individuais das interações anteriores não registrados. A data e o horário da execução técnica estão em results/ambiente.json.
 
 ## Registro 1
 
@@ -19,11 +23,11 @@ preciso que me ajude a me organizar para esses projeto!
 meu grupo e o de random forest, então primeiro veja tudo, organize seu pensamento sobre, traga perguntas caso queira, ja tenho uma definição para algumas coisas e vou te passar depois de tudo
 ```
 
-Resposta: A IA leu os materiais e consolidou entregas e checkpoints.
+Apoio da IA: A IA leu os materiais da disciplina e organizou os requisitos, as entregas e os checkpoints.
 
-Validação: Conferência cruzada dos documentos fornecidos; inconsistência de duração da palestra identificada.
+Verificação: Conferência cruzada dos documentos fornecidos, com identificação de diferenças nas orientações de duração da apresentação.
 
-Uso e revisão: Uso proposto: apoiar o planejamento; o grupo precisa confirmar sua adoção.
+Uso pelo grupo: Utilizamos a organização apresentada como apoio ao planejamento. A leitura e a discussão dos materiais contribuíram para compreender as etapas e as entregas do projeto.
 
 ## Registro 2
 
@@ -37,11 +41,11 @@ Prompt exato:
 esse dataset ta ok?
 ```
 
-Resposta: A IA verificou a fonte ULB no Kaggle, o desbalanceamento e a anonimização por PCA. Propôs adaptar a demonstração ao esquema real da base.
+Apoio da IA: A IA consultou a descrição oficial do dataset ULB no Kaggle e apresentou características da base, como o desbalanceamento e a anonimização por PCA, além de implicações para a demonstração.
 
-Validação: Descrição oficial obtida pela API pública do Kaggle e documentação de métricas consultada. A análise do CSV ainda não havia ocorrido nessa interação.
+Verificação: Consulta à fonte oficial e à documentação de métricas. Nessa interação, a avaliação ainda se limitava à descrição da base; a análise do CSV foi realizada posteriormente.
 
-Uso e revisão: A decisão de manter a base está sendo utilizada nesta implementação; o grupo deve revisar as limitações.
+Uso pelo grupo: A análise apoiou a manutenção do dataset no projeto e ajudou a compreender suas limitações. Consideramos essas informações na discussão da aplicação e dos resultados.
 
 ## Registro 3
 
@@ -55,11 +59,11 @@ Prompt exato:
 preciso que me ajude a completar tudo isso, tenho que entregar!
 ```
 
-Resposta: Foram produzidos scripts, auditoria, gráficos, comparação de modelos, documentos e instruções de reprodução.
+Apoio da IA: A IA apoiou a implementação e a execução do pipeline, a geração de gráficos, a comparação dos modelos e a preparação da documentação do checkpoint.
 
-Validação: Dataset baixado da fonte oficial e hash registrado; pipeline executado; métricas recalculadas a partir das previsões; modelo recarregado; CSV inválido rejeitado.
+Verificação: Verificação técnica realizada com apoio da IA: download da fonte oficial e registro do hash; execução do pipeline; recálculo das métricas a partir das previsões; recarga do modelo salvo; rejeição de CSV com esquema inválido.
 
-Uso e revisão: Aceitação e modificações pelos integrantes ainda devem ser registradas após revisão. A execução com apoio da IA não comprova domínio do grupo.
+Uso pelo grupo: Visualizamos os resultados e os materiais produzidos, discutimos o conteúdo e aprovamos sua utilização no projeto. O processo também contribuiu para nosso aprendizado sobre o trabalho desenvolvido.
 
 ## Registro 4
 
@@ -75,8 +79,12 @@ git@github.com:lipeinacio/random_forest.git
 ele ta privado, tu consegue acessar mesmo assim?
 ```
 
-Resposta: SSH retornou Permission denied (publickey); acesso HTTPS funcionou e o repositório foi clonado vazio.
+Apoio da IA: A IA verificou o acesso ao repositório privado. A conexão por SSH foi recusada, enquanto o acesso por HTTPS funcionou. O repositório foi utilizado para organizar o código e os materiais.
 
-Validação: git ls-remote e git clone por HTTPS, sem expor credenciais.
+Verificação: Verificação por git ls-remote e git clone via HTTPS, seguida de publicação dos arquivos. Credenciais não foram incluídas no projeto.
 
-Uso e revisão: Conferir a publicação e o convite ao professor. Não registrar tokens ou chaves no diário.
+Uso pelo grupo: Utilizamos o repositório para reunir o código, os resultados e os documentos aprovados pelo grupo. O acesso do professor deve ser conferido antes da entrega.
+
+## Síntese do uso de IA no projeto
+
+Utilizamos a IA como apoio à organização, à implementação, à análise e à redação dos materiais. Visualizamos os resultados apresentados, discutimos o conteúdo e aprovamos sua utilização no projeto. Essa interação também fez parte do nosso aprendizado. As verificações técnicas estão documentadas no código e nos resultados, enquanto a participação do grupo incluiu a leitura, a discussão e a avaliação dos materiais. O Diário de IA tem finalidade de acompanhamento e não compõe a nota do projeto.
