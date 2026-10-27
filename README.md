@@ -131,7 +131,3 @@ A aplicação é educacional e não autoriza bloqueios reais.
 - [Diário de IA iniciado](docs/04_Diario_IA_Iniciado.pdf)
 - [Cinco artigos científicos e três fontes de apoio](docs/referencias.md)
 - [Guia para entrega e ensaio](docs/LEIA_PRIMEIRO.md)
-
-Os PDFs têm versões textuais editáveis em Markdown. O resumo é um rascunho para
-o checkpoint; a formatação final deverá seguir o template vigente da Jornada Científica da FIB.
-Repositório privado: confirmar convite e acesso do professor antes da aula.
