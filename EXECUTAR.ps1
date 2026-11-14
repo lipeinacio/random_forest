@@ -8,7 +8,7 @@ if (-not (Test-Path -LiteralPath '.venv/Scripts/python.exe')) {
 if ($LASTEXITCODE -ne 0) { throw 'Falha ao instalar dependencias.' }
 & '.venv/Scripts/python.exe' src/baixar_dados.py
 if ($LASTEXITCODE -ne 0) { throw 'Falha ao obter/verificar o dataset.' }
-& '.venv/Scripts/python.exe' src/pipeline.py
+& '.venv/Scripts/python.exe' src/finalizar.py
 if ($LASTEXITCODE -ne 0) { throw 'Falha na execucao do pipeline.' }
 & '.venv/Scripts/python.exe' src/prever.py
 if ($LASTEXITCODE -ne 0) { throw 'Falha na demonstracao de predicao.' }

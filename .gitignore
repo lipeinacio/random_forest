@@ -8,3 +8,8 @@ kaggle.json
 .DS_Store
 results/divisao.csv
 results/predicoes_validacao.csv
+.build/
+node_modules/
+*.log
+results/reproducao/
+models/reproducao/

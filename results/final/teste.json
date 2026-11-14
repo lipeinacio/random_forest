@@ -1,0 +1,65 @@
+{
+  "Random Forest final": {
+    "precision": 0.9444444444444444,
+    "recall": 0.7157894736842105,
+    "f1": 0.8143712574850299,
+    "average_precision": 0.7866687924370233,
+    "accuracy": 0.9994537059880872,
+    "confusion_matrix": [
+      [
+        56647,
+        4
+      ],
+      [
+        27,
+        68
+      ]
+    ],
+    "precision_ci95_wilson": [
+      0.8656798403400208,
+      0.9781857840186834
+    ],
+    "recall_ci95_wilson": [
+      0.6180898964168235,
+      0.7967157983714039
+    ],
+    "f1_ci95_bootstrap_stratified": [
+      0.7468354430379747,
+      0.872093023255814
+    ]
+  },
+  "Arvore de Decisao": {
+    "precision": 0.21712538226299694,
+    "recall": 0.7473684210526316,
+    "f1": 0.33649289099526064,
+    "average_precision": 0.520559213886276,
+    "accuracy": 0.9950657315053043,
+    "confusion_matrix": [
+      [
+        56395,
+        256
+      ],
+      [
+        24,
+        71
+      ]
+    ]
+  },
+  "Sempre normal": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "average_precision": 0.0016741268107003137,
+    "accuracy": 0.9983258731892997,
+    "confusion_matrix": [
+      [
+        56651,
+        0
+      ],
+      [
+        95,
+        0
+      ]
+    ]
+  }
+}

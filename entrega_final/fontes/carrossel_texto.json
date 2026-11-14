@@ -1,0 +1,32 @@
+[
+  [
+    "Uma IA consegue encontrar fraudes?",
+    "Nosso grupo investigou como um Random Forest pode ajudar na revisão de transações.",
+    "Caçador de Fraudes · Grupo 3 · IA II · FIB"
+  ],
+  [
+    "99,83% de acurácia pode enganar",
+    "Na validação, responder “normal” para tudo acerta 99,83% das transações. E encontra zero fraudes.",
+    "Por isso, analisamos precisão, recall e F1 da fraude."
+  ],
+  [
+    "Os dados vêm antes do modelo",
+    "A base ULB/Worldline contém 284.807 transações e 492 fraudes de dois dias de 2013. Removemos cópias completas e separamos treino, validação e teste.",
+    "Time, Amount e 28 componentes anonimizados de PCA."
+  ],
+  [
+    "Uma floresta de 100 árvores",
+    "Cada árvore aprende com uma amostra diferente do treino e considera subconjuntos de variáveis. A média dos scores é comparada com um limiar.",
+    "A analogia é uma equipe de revisores com perspectivas diferentes."
+  ],
+  [
+    "Menos alertas falsos, com uma troca",
+    "No teste reservado, a floresta gerou 4 falsos alertas e encontrou 68 de 95 fraudes. A árvore gerou 256 falsos alertas e encontrou 71.",
+    "Precisão 94,44% · Recall 71,58% · F1 0,8144"
+  ],
+  [
+    "Explore e questione o resultado",
+    "O protótipo permite analisar exemplos, alterar entradas e observar o efeito do limiar. Uma base antiga não garante desempenho futuro.",
+    "QR para código e instruções locais. Score sem calibração. Revisão humana."
+  ]
+]

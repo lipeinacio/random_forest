@@ -88,3 +88,18 @@ Uso pelo grupo: Utilizamos o repositório para reunir o código, os resultados e
 ## Síntese do uso de IA no projeto
 
 Utilizamos a IA como apoio à organização, à implementação, à análise e à redação dos materiais. Visualizamos os resultados apresentados, discutimos o conteúdo e aprovamos sua utilização no projeto. Essa interação também fez parte do nosso aprendizado. As verificações técnicas estão documentadas no código e nos resultados, enquanto a participação do grupo incluiu a leitura, a discussão e a avaliação dos materiais. O Diário de IA tem finalidade de acompanhamento e não compõe a nota do projeto.
+
+
+## Registro 5
+
+Data: 13/11/2026. Etapas: conclusão dos experimentos, protótipo e comunicação. Ferramenta: Codex, OpenAI. Modelo/versão visível ao usuário nesta interação: não informado no registro.
+
+Prompts relevantes enviados pelo usuário: “consegue me trazer tudo pronto?” e “use esse repositorio como exemplo para melhorar qualquer metrica necessaria para a conclusao do nosso seminario!” Referência indicada: https://github.com/ViniciusSilveiraCampos/football-pca-map.
+
+Apoio da IA: leitura do repositório e das exigências; uso do projeto de PCA como referência de organização, sem copiar seus dados ou resultados; implementação de três experimentos com hipóteses previamente gravadas; seleção na validação; avaliação final; protótipo; elaboração dos materiais e roteiros.
+
+Validação técnica: hash da base oficial conferido; reprodução da configuração original; isolamento de registros entre conjuntos; testes automatizados de inferência, rejeição de Class e entradas inválidas; conferência das matrizes e métricas. Resultados e ambiente em results/final/. A seleção foi gravada antes do teste. O recall menor no teste foi preservado na comunicação.
+
+Uso pelo grupo nesta etapa: materiais disponibilizados para leitura, revisão, ensaio e eventual adoção. Não houve declaração de revisão individual ou teste em outro computador nesta interação. Esses fatos só devem ser acrescentados após ocorrerem.
+
+Reflexão dos integrantes e verificação em outra máquina: pendentes de registro real pelo grupo. Não foram simulados depoimentos, participação ou aprovação.

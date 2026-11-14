@@ -1,0 +1,12 @@
+Uma IA pode ajudar a encontrar fraudes sem gerar alertas demais? Investigamos essa pergunta com Random Forest e uma árvore de decisão.
+
+No teste reservado, com 56.746 transações e 95 fraudes, a floresta identificou 68 fraudes, deixou 27 passarem e gerou 4 falsos alertas. A árvore identificou 71 e gerou 256 falsos alertas. A floresta teve precisão de 94,44%, recall de 71,58% e F1 de 0,8144.
+
+A configuração foi escolhida pela validação. O teste não foi usado para ajustar parâmetros. A base é de dois dias de 2013, as variáveis são parcialmente anonimizadas e os scores não foram calibrados. O protótipo é educacional e mantém revisão humana.
+
+Conheça o código, os experimentos e as instruções para executar a aplicação: https://github.com/lipeinacio/random_forest
+
+Grupo 3 · Inteligência Artificial II · FIB
+Lavinia Zanata Alves; Maicon Manoel Rodrigues dos Santos; Gabriel Damante Frias; André Luiz Jeremias Pereira Junior; Felipe Inácio de Paula.
+
+#InteligenciaArtificial #RandomForest #CienciaDeDados #FIB #AprendizadoDeMaquina

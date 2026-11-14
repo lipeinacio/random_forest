@@ -1,0 +1,227 @@
+{
+  "selection": {
+    "selected": "sem_pesos",
+    "threshold": 0.5,
+    "selection_set": "validacao",
+    "selected_at_utc": "2026-11-14T01:01:39.042426+00:00",
+    "test_evaluated_at_selection": false,
+    "features": [
+      "Time",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17",
+      "V18",
+      "V19",
+      "V20",
+      "V21",
+      "V22",
+      "V23",
+      "V24",
+      "V25",
+      "V26",
+      "V27",
+      "V28",
+      "Amount"
+    ],
+    "plan_sha256": "5521e42ddde91726dd2a79a5d4fa9d0a009fbe512743e4d5de5bdea1f7c38b42",
+    "criterion": "Maior F1 da classe fraude na validacao com limiar 0.5; desempate por AP e ID."
+  },
+  "raw_rows": 284807,
+  "clean_rows": 283726,
+  "sha256": "76274b691b16a6c49d3f159c883398e03ccd6d1ee12d9d8ee38f4b4b98551a89",
+  "splits": {
+    "treino": {
+      "rows": 170235,
+      "frauds": 284
+    },
+    "validacao": {
+      "rows": 56745,
+      "frauds": 94
+    },
+    "teste": {
+      "rows": 56746,
+      "frauds": 95
+    }
+  },
+  "validation": {
+    "precision": 0.9058823529411765,
+    "recall": 0.8191489361702128,
+    "f1": 0.8603351955307262,
+    "average_precision": 0.8748094046986401,
+    "accuracy": 0.9995594325491233,
+    "confusion_matrix": [
+      [
+        56643,
+        8
+      ],
+      [
+        17,
+        77
+      ]
+    ],
+    "train_seconds": 28.705155300005572,
+    "features": [
+      "Time",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17",
+      "V18",
+      "V19",
+      "V20",
+      "V21",
+      "V22",
+      "V23",
+      "V24",
+      "V25",
+      "V26",
+      "V27",
+      "V28",
+      "Amount"
+    ],
+    "params": {
+      "n_estimators": 100,
+      "max_depth": 12,
+      "min_samples_leaf": 2,
+      "class_weight": null,
+      "random_state": 42,
+      "n_jobs": 4
+    }
+  },
+  "test": {
+    "Random Forest final": {
+      "precision": 0.9444444444444444,
+      "recall": 0.7157894736842105,
+      "f1": 0.8143712574850299,
+      "average_precision": 0.7866687924370233,
+      "accuracy": 0.9994537059880872,
+      "confusion_matrix": [
+        [
+          56647,
+          4
+        ],
+        [
+          27,
+          68
+        ]
+      ],
+      "precision_ci95_wilson": [
+        0.8656798403400208,
+        0.9781857840186834
+      ],
+      "recall_ci95_wilson": [
+        0.6180898964168235,
+        0.7967157983714039
+      ],
+      "f1_ci95_bootstrap_stratified": [
+        0.7468354430379747,
+        0.872093023255814
+      ]
+    },
+    "Arvore de Decisao": {
+      "precision": 0.21712538226299694,
+      "recall": 0.7473684210526316,
+      "f1": 0.33649289099526064,
+      "average_precision": 0.520559213886276,
+      "accuracy": 0.9950657315053043,
+      "confusion_matrix": [
+        [
+          56395,
+          256
+        ],
+        [
+          24,
+          71
+        ]
+      ]
+    },
+    "Sempre normal": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "average_precision": 0.0016741268107003137,
+      "accuracy": 0.9983258731892997,
+      "confusion_matrix": [
+        [
+          56651,
+          0
+        ],
+        [
+          95,
+          0
+        ]
+      ]
+    }
+  },
+  "errors_validation": [
+    {
+      "linha_original": 50537,
+      "Class": 1,
+      "Amount": 1.0,
+      "score_rf": 7.203778793331484e-05,
+      "previsto_rf": 0,
+      "tipo": "FN"
+    },
+    {
+      "linha_original": 118308,
+      "Class": 1,
+      "Amount": 30.14,
+      "score_rf": 7.44697138306217e-05,
+      "previsto_rf": 0,
+      "tipo": "FN"
+    },
+    {
+      "linha_original": 14920,
+      "Class": 0,
+      "Amount": 1.0,
+      "score_rf": 0.8228333333333333,
+      "previsto_rf": 1,
+      "tipo": "FP"
+    },
+    {
+      "linha_original": 164955,
+      "Class": 0,
+      "Amount": 119.99,
+      "score_rf": 0.813,
+      "previsto_rf": 1,
+      "tipo": "FP"
+    }
+  ],
+  "environment": {
+    "python": "3.12.10",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.1"
+  },
+  "completed_at_utc": "2026-11-14T01:01:51.063227+00:00",
+  "reference_reproduced": true,
+  "test_used_for_selection": false,
+  "uncertainty": "Wilson 95% para precisao/recall. Bootstrap estratificado 1000 repeticoes para F1, condicional a esta divisao e modelo fixos. Nao mede drift ou variacao entre treinos."
+}

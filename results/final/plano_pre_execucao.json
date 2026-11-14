@@ -1,0 +1,34 @@
+{
+  "seed": 42,
+  "threshold": 0.5,
+  "selection": "Maior F1 da classe fraude na validacao com limiar 0.5; desempate por AP e ID.",
+  "frozen_test": "Somente modelo escolhido e baseline sao avaliados no teste, apos gravar a decisao.",
+  "experiments": [
+    {
+      "id": "E1",
+      "hypothesis": "Retirar balanced pode reduzir falsos alertas, com possivel perda de recall.",
+      "change": "class_weight: balanced -> None",
+      "variant": "sem_pesos"
+    },
+    {
+      "id": "E2",
+      "hypothesis": "Profundidade 6 pode reduzir sobreajuste, mas perder fraudes complexas.",
+      "change": "max_depth: 12 -> 6",
+      "variant": "profundidade_6"
+    },
+    {
+      "id": "E3",
+      "hypothesis": "Remover V17, V14 e V12 pode reduzir F1/AP por retirar sinais destacados na EDA de treino.",
+      "change": "Remover apenas V17, V14 e V12 das entradas",
+      "variant": "sem_top3"
+    }
+  ],
+  "variants": [
+    "referencia",
+    "sem_pesos",
+    "profundidade_6",
+    "sem_top3"
+  ],
+  "limits": "Uma semente e uma divisao. Sem busca exaustiva, calibracao ou validacao temporal.",
+  "registered_at_utc": "2026-11-14T01:00:24.953973+00:00"
+}
