@@ -1,0 +1,83 @@
+1
+00:00:00,667 --> 00:00:07,111
+Para usar o Caçador de Fraudes, escolha um
+exemplo pronto. Não é preciso preencher os
+
+2
+00:00:07,111 --> 00:00:07,566
+dados.
+
+3
+00:00:07,774 --> 00:00:13,903
+Clique em analisar transação. À direita
+aparecem o índice, a sugestão e a comparação
+
+4
+00:00:13,903 --> 00:00:14,998
+com o gabarito.
+
+5
+00:00:16,540 --> 00:00:20,385
+Agora escolho compra com fraude e analiso
+novamente.
+
+6
+00:00:20,593 --> 00:00:26,899
+A sugestão é revisar esta transação. O quadro
+abaixo mostra que o modelo acertou este
+
+7
+00:00:26,899 --> 00:00:27,492
+exemplo.
+
+8
+00:00:29,034 --> 00:00:33,175
+Em desafie o modelo, você encontra casos em
+que ele errou.
+
+9
+00:00:33,383 --> 00:00:40,382
+Neste exemplo, uma fraude passou sem alerta.
+Use outro exemplo para explorar mais casos.
+
+10
+00:00:41,924 --> 00:00:47,065
+Para ajustar os alertas, abra a sensibilidade
+e mude o ponto de corte.
+
+11
+00:00:47,273 --> 00:00:53,624
+Depois clique em analisar novamente. Aqui, o
+mesmo índice deixa de gerar alerta quando o
+
+12
+00:00:53,624 --> 00:00:55,355
+corte sobe para noventa.
+
+13
+00:00:56,897 --> 00:01:03,355
+Para analisar várias transações, escolha
+enviar um arquivo CSV. Você pode baixar um
+
+14
+00:01:03,355 --> 00:01:04,834
+exemplo nesta tela.
+
+15
+00:01:05,042 --> 00:01:11,340
+Selecione o arquivo e clique em analisar. O
+resumo mostra o total de linhas e os alertas
+
+16
+00:01:11,340 --> 00:01:12,270
+para revisão.
+
+17
+00:01:13,812 --> 00:01:19,057
+Confira a tabela e clique em baixar resultado
+para salvar todas as previsões.
+
+18
+00:01:19,265 --> 00:01:25,873
+Pronto. O aplicativo ajuda na revisão humana.
+Um alerta não comprova fraude.

@@ -204,6 +204,7 @@ gabarito automático. O grupo deve explicar essas limitações e o efeito do lim
 | Ficha de experimentos | [PDF](entrega_final/documentos/03_Ficha_experimentos.pdf) |
 | Folder A4 com dobra | [PDF](entrega_final/divulgacao/01_Folder_dobravel.pdf) |
 | Instagram | [Seis PNGs, PDF e legenda](entrega_final/divulgacao/) |
+| Vídeo rápido de uso | [MP4: exemplos, análise, sensibilidade, CSV e download](entrega_final/divulgacao/Uso_rapido_Cacador_de_Fraudes.mp4) · [Roteiro](entrega_final/divulgacao/Roteiro_uso_rapido.md) · [Legendas SRT](entrega_final/divulgacao/Uso_rapido_Cacador_de_Fraudes.srt) |
 | Vídeo de funcionamento e explicação | [MP4 com narração sintética, legendas e capítulos](entrega_final/divulgacao/Demonstracao_Cacador_de_Fraudes.mp4) · [Roteiro](entrega_final/divulgacao/Roteiro_demonstracao.md) · [Legendas SRT](entrega_final/divulgacao/Demonstracao_Cacador_de_Fraudes.srt) |
 | Checklist | [PDF](entrega_final/documentos/04_Checklist_entrega_e_ensaio.pdf) |
 | Diário de IA | [Markdown](entrega_final/documentos/05_Diario_de_IA.md) · [PDF](entrega_final/documentos/05_Diario_de_IA.pdf) |
