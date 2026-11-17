@@ -1,0 +1,573 @@
+1
+00:00:00,667 --> 00:00:06,477
+Este é o Caçador de Fraudes, um aplicativo
+educacional que usa inteligência artificial
+
+2
+00:00:06,477 --> 00:00:08,166
+para analisar transações.
+
+3
+00:00:08,374 --> 00:00:12,740
+A pergunta principal é: esta compra merece uma
+revisão humana?
+
+4
+00:00:12,948 --> 00:00:19,157
+Vamos entender a árvore de decisão, a floresta
+e o significado dos resultados, acompanhando o
+
+5
+00:00:19,157 --> 00:00:20,626
+aplicativo de verdade.
+
+6
+00:00:22,168 --> 00:00:27,396
+Uma árvore de decisão funciona como uma
+sequência de perguntas sobre os números de uma
+
+7
+00:00:27,396 --> 00:00:28,004
+transação.
+
+8
+00:00:28,213 --> 00:00:34,351
+Neste desenho fictício, a primeira pergunta
+separa compras pelo valor. Outra pergunta
+
+9
+00:00:34,351 --> 00:00:36,662
+examina um componente dos dados.
+
+10
+00:00:36,870 --> 00:00:43,067
+Cada resposta leva a um galho. O caminho
+termina em uma folha, que produz um score para
+
+11
+00:00:43,067 --> 00:00:44,207
+a classe fraude.
+
+12
+00:00:44,415 --> 00:00:49,623
+As perguntas e os valores de corte são
+aprendidos durante o treinamento. Não
+
+13
+00:00:49,623 --> 00:00:52,501
+escrevemos manualmente todas essas regras.
+
+14
+00:00:54,043 --> 00:00:58,856
+Uma árvore sozinha pode decorar
+particularidades do treino e falhar em
+
+15
+00:00:58,856 --> 00:01:02,500
+transações diferentes. Isso é chamado de
+sobreajuste.
+
+16
+00:01:02,708 --> 00:01:09,116
+A floresta do projeto combina cem árvores. No
+treinamento, cada uma recebe uma amostra
+
+17
+00:01:09,116 --> 00:01:11,053
+aleatória, com repetições.
+
+18
+00:01:11,262 --> 00:01:17,423
+Além disso, cada nova pergunta considera
+apenas parte dos campos disponíveis, escolhida
+
+19
+00:01:17,423 --> 00:01:18,486
+aleatoriamente.
+
+20
+00:01:18,694 --> 00:01:24,982
+Isso cria caminhos diferentes. Combinar os
+scores das árvores ajuda, mas não garante que
+
+21
+00:01:24,982 --> 00:01:26,768
+a floresta sempre acerte.
+
+22
+00:01:28,310 --> 00:01:34,722
+Para simplificar, imagine apenas três árvores
+com scores de zero vírgula dois, zero vírgula
+
+23
+00:01:34,722 --> 00:01:36,483
+sete e zero vírgula nove.
+
+24
+00:01:36,692 --> 00:01:43,373
+A média desses valores é zero vírgula seis.
+Multiplicando por cem, o aplicativo mostra um
+
+25
+00:01:43,373 --> 00:01:44,574
+índice sessenta.
+
+26
+00:01:44,782 --> 00:01:51,305
+No modelo real, a média usa cem árvores. Um
+índice oitenta e três não significa oitenta e
+
+27
+00:01:51,305 --> 00:01:52,844
+três votos em fraude.
+
+28
+00:01:53,052 --> 00:01:59,312
+O índice também não comprova uma probabilidade
+real de fraude. Os scores não foram calibrados
+
+29
+00:01:59,312 --> 00:01:59,985
+para isso.
+
+30
+00:02:01,526 --> 00:02:08,412
+O aplicativo recebe trinta números. Amount é o
+valor da transação. Time é o tempo desde a
+
+31
+00:02:08,412 --> 00:02:10,500
+primeira transação da base.
+
+32
+00:02:10,709 --> 00:02:16,893
+Os outros vinte e oito campos são componentes
+numéricos de uma transformação chamada PCA, já
+
+33
+00:02:16,893 --> 00:02:18,103
+fornecida na base.
+
+34
+00:02:18,312 --> 00:02:24,017
+Não conhecemos seus significados comerciais
+originais. Não podemos chamar um desses
+
+35
+00:02:24,017 --> 00:02:26,423
+componentes de loja ou localização.
+
+36
+00:02:26,632 --> 00:02:33,237
+Existe ainda o gabarito, chamado Class: zero
+para compra legítima e um para fraude. Ele não
+
+37
+00:02:33,237 --> 00:02:34,543
+entra na previsão.
+
+38
+00:02:36,085 --> 00:02:42,033
+O treinamento aconteceu antes de abrir o
+aplicativo. A base histórica foi limpa,
+
+39
+00:02:42,033 --> 00:02:44,338
+removendo registros duplicados.
+
+40
+00:02:44,546 --> 00:02:50,921
+Sessenta por cento dos dados foram usados para
+ensinar os modelos. Vinte por cento serviram
+
+41
+00:02:50,921 --> 00:02:52,883
+para comparar configurações.
+
+42
+00:02:53,091 --> 00:02:58,075
+Os vinte por cento restantes ficaram
+reservados para o teste final, depois de
+
+43
+00:02:58,075 --> 00:03:00,469
+escolher a configuração na validação.
+
+44
+00:03:00,678 --> 00:03:06,952
+O modelo treinado foi salvo em um arquivo.
+Clicar em analisar apenas aplica esse modelo:
+
+45
+00:03:06,952 --> 00:03:09,306
+não acontece um novo treinamento.
+
+46
+00:03:10,847 --> 00:03:17,566
+Agora vamos usar o aplicativo. Na tela de
+análise, escolho compra comum. Os dados do
+
+47
+00:03:17,566 --> 00:03:19,725
+exemplo já vêm preenchidos.
+
+48
+00:03:19,934 --> 00:03:26,362
+Clico em analisar transação. A floresta avalia
+os trinta campos e o resultado aparece à
+
+49
+00:03:26,362 --> 00:03:26,953
+direita.
+
+50
+00:03:27,162 --> 00:03:33,320
+O índice ficou abaixo do corte cinquenta,
+então não houve alerta. O gabarito confirma
+
+51
+00:03:33,320 --> 00:03:35,348
+que este exemplo é legítimo.
+
+52
+00:03:35,557 --> 00:03:41,952
+Sem alerta não é garantia de segurança. É
+apenas a sugestão do modelo para estes dados e
+
+53
+00:03:41,952 --> 00:03:42,751
+este corte.
+
+54
+00:03:44,293 --> 00:03:51,019
+Agora escolho compra com fraude e peço outra
+análise. Este exemplo tem fraude confirmada no
+
+55
+00:03:51,019 --> 00:03:52,275
+gabarito da base.
+
+56
+00:03:52,484 --> 00:03:58,634
+O índice ficou em oitenta e três, acima do
+corte cinquenta. A sugestão é enviar para
+
+57
+00:03:58,634 --> 00:03:59,733
+revisão humana.
+
+58
+00:03:59,941 --> 00:04:06,512
+Neste caso o modelo acertou. Mas o alerta,
+sozinho, não confirma fraude e não autoriza
+
+59
+00:04:06,512 --> 00:04:08,040
+bloquear uma compra.
+
+60
+00:04:09,582 --> 00:04:15,289
+Vou abrir o ajuste de sensibilidade e aumentar
+o ponto de corte de cinquenta para noventa.
+
+61
+00:04:15,497 --> 00:04:21,772
+Ao analisar a mesma transação, o índice
+continua oitenta e três. Como ficou abaixo de
+
+62
+00:04:21,772 --> 00:04:23,913
+noventa, o alerta desaparece.
+
+63
+00:04:24,121 --> 00:04:30,724
+O modelo não mudou. Mudou apenas a exigência
+para emitir um alerta, e esta fraude passou
+
+64
+00:04:30,724 --> 00:04:31,550
+sem alerta.
+
+65
+00:04:31,758 --> 00:04:38,069
+Diminuir o corte tende a gerar mais alertas e
+também mais alarmes falsos. Aumentar o corte
+
+66
+00:04:38,069 --> 00:04:40,453
+pode deixar mais fraudes passarem.
+
+67
+00:04:41,994 --> 00:04:48,664
+Restauro o corte cinquenta e escolho desafie o
+modelo. Aqui temos um erro real da validação.
+
+68
+00:04:48,873 --> 00:04:54,976
+O gabarito confirma uma fraude, mas o índice é
+muito baixo e a floresta não gera alerta.
+
+69
+00:04:55,184 --> 00:05:00,308
+Esse erro é chamado de falso negativo: uma
+fraude que não foi detectada.
+
+70
+00:05:00,517 --> 00:05:06,213
+Neste exemplo, nem o menor corte disponível no
+aplicativo resolve o erro. Mudar a
+
+71
+00:05:06,213 --> 00:05:09,941
+sensibilidade não garante encontrar todas as
+fraudes.
+
+72
+00:05:11,482 --> 00:05:18,065
+Avanço para outro caso de erro. Agora o índice
+é alto e a sugestão é revisar a transação.
+
+73
+00:05:18,273 --> 00:05:24,800
+Só que o gabarito confirma uma compra
+legítima. Esse é um falso positivo, ou alarme
+
+74
+00:05:24,800 --> 00:05:25,272
+falso.
+
+75
+00:05:25,480 --> 00:05:30,412
+Esses dois tipos de erro mostram por que
+precisamos avaliar o modelo e manter uma
+
+76
+00:05:30,412 --> 00:05:31,325
+revisão humana.
+
+77
+00:05:32,867 --> 00:05:38,909
+Também é possível abrir os dados e alterar o
+valor da transação. Vou fazer uma edição e
+
+78
+00:05:38,909 --> 00:05:40,228
+analisar novamente.
+
+79
+00:05:40,437 --> 00:05:46,192
+O aplicativo avisa que este cenário não tem
+gabarito associado, porque os dados já não são
+
+80
+00:05:46,192 --> 00:05:48,111
+os mesmos do exemplo original.
+
+81
+00:05:48,319 --> 00:05:54,644
+Alterar apenas o valor não garante mudar o
+resultado. A floresta considera o conjunto dos
+
+82
+00:05:54,644 --> 00:05:55,639
+trinta campos.
+
+83
+00:05:57,180 --> 00:06:03,019
+Restauro um exemplo de fraude e abro a
+visualização das árvores. Cada quadradinho
+
+84
+00:06:03,019 --> 00:06:04,604
+representa uma árvore.
+
+85
+00:06:04,813 --> 00:06:11,319
+Quanto mais escuro, maior o score atribuído
+por ela. Algumas árvores podem discordar das
+
+86
+00:06:11,319 --> 00:06:11,837
+outras.
+
+87
+00:06:12,045 --> 00:06:17,821
+A média dos cem scores gera o índice da
+floresta. Esta visualização mostra os scores,
+
+88
+00:06:17,821 --> 00:06:21,490
+mas não explica a causa de uma compra ser
+fraudulenta.
+
+89
+00:06:23,031 --> 00:06:28,994
+Para analisar várias transações, escolho
+enviar um arquivo de valores separados por
+
+90
+00:06:28,994 --> 00:06:30,718
+vírgula, no formato CSV.
+
+91
+00:06:30,926 --> 00:06:37,361
+O arquivo precisa das mesmas trinta colunas
+numéricas. Não pode incluir Class, porque ela
+
+92
+00:06:37,361 --> 00:06:38,663
+contém o gabarito.
+
+93
+00:06:38,871 --> 00:06:44,901
+Envio o arquivo de demonstração e clico em
+analisar. O resumo mostra quantas linhas foram
+
+94
+00:06:44,901 --> 00:06:47,678
+analisadas e quantas precisam de revisão.
+
+95
+00:06:47,887 --> 00:06:53,565
+O indicador principal se refere à primeira
+linha. A tabela e o arquivo de resultados
+
+96
+00:06:53,565 --> 00:06:56,269
+permitem consultar as outras transações.
+
+97
+00:06:57,810 --> 00:07:03,475
+Na seção resultados do modelo, vemos a
+avaliação em cinquenta e seis mil, setecentas
+
+98
+00:07:03,475 --> 00:07:05,430
+e quarenta e seis transações.
+
+99
+00:07:05,639 --> 00:07:11,870
+Havia noventa e cinco fraudes conhecidas. A
+floresta encontrou sessenta e oito e deixou
+
+100
+00:07:11,870 --> 00:07:13,446
+vinte e sete passarem.
+
+101
+00:07:13,654 --> 00:07:19,030
+Também gerou quatro alarmes falsos, ou seja,
+quatro compras legítimas que foram
+
+102
+00:07:19,030 --> 00:07:20,799
+encaminhadas para revisão.
+
+103
+00:07:21,007 --> 00:07:27,078
+Esses resultados usam o modelo escolhido na
+validação e o corte padrão cinquenta. Mudar o
+
+104
+00:07:27,078 --> 00:07:30,352
+corte na demonstração não altera estas
+métricas.
+
+105
+00:07:31,894 --> 00:07:38,716
+Precisão pergunta: entre os alertas emitidos,
+quantos eram realmente fraudes? Foram sessenta
+
+106
+00:07:38,716 --> 00:07:41,163
+e oito de setenta e dois alertas.
+
+107
+00:07:41,372 --> 00:07:46,283
+Por isso a precisão foi noventa e quatro
+vírgula quarenta e quatro por cento.
+
+108
+00:07:46,492 --> 00:07:52,676
+Recall pergunta: entre todas as fraudes
+existentes, quantas foram encontradas? Foram
+
+109
+00:07:52,676 --> 00:07:55,253
+sessenta e oito de noventa e cinco.
+
+110
+00:07:55,462 --> 00:08:01,490
+O recall foi setenta e um vírgula cinquenta e
+oito por cento. O F um combina precisão e
+
+111
+00:08:01,490 --> 00:08:05,856
+recall, e ficou em aproximadamente zero
+vírgula oito um quatro.
+
+112
+00:08:07,398 --> 00:08:12,956
+Na comparação deste projeto, a árvore isolada
+encontrou setenta e uma fraudes e gerou
+
+113
+00:08:12,956 --> 00:08:15,767
+duzentos e cinquenta e seis alarmes falsos.
+
+114
+00:08:15,976 --> 00:08:21,836
+A floresta final encontrou sessenta e oito
+fraudes e gerou quatro alarmes falsos. Ela
+
+115
+00:08:21,836 --> 00:08:26,799
+reduziu bastante a revisão indevida, mas
+encontrou três fraudes a menos.
+
+116
+00:08:27,008 --> 00:08:32,901
+Também não basta olhar a acurácia geral: como
+fraude é rara, responder tudo normal daria
+
+117
+00:08:32,901 --> 00:08:36,048
+muitos acertos, sem encontrar uma única
+fraude.
+
+118
+00:08:37,590 --> 00:08:43,409
+A base contém apenas dois dias de dois mil e
+treze. Esses resultados não garantem
+
+119
+00:08:43,409 --> 00:08:45,493
+desempenho em fraudes atuais.
+
+120
+00:08:45,701 --> 00:08:51,614
+Para usar o aplicativo, escolha um exemplo,
+peça a análise, leia a sugestão e compare com
+
+121
+00:08:51,614 --> 00:08:54,338
+o gabarito quando ele estiver disponível.
+
+122
+00:08:54,546 --> 00:09:01,213
+Uma árvore faz perguntas. A floresta combina
+cem árvores. O índice resume os scores, e o
+
+123
+00:09:01,213 --> 00:09:04,849
+ponto de corte transforma esse índice em
+alerta.
+
+124
+00:09:05,057 --> 00:09:11,333
+O objetivo é apoiar a revisão humana. Este é
+um projeto educacional do grupo três de
+
+125
+00:09:11,333 --> 00:09:14,098
+Inteligência Artificial dois, da FIB.
