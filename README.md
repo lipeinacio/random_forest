@@ -65,6 +65,18 @@ python -m venv .venv
 Abra **http://127.0.0.1:8501**. Após a instalação, também é possível executar
 `INICIAR_AQUI.bat` ou `INICIAR_PROTOTIPO.ps1`. No Linux/macOS, use `.venv/bin/python`.
 
+### Usar a interface
+
+1. Em **Analisar transações**, escolha **Compra comum**, **Compra com fraude** ou **Desafie o modelo**. Os exemplos já vêm preenchidos.
+2. Clique em **Analisar transação**. O resultado mostra a sugestão de revisão, o índice do modelo e a comparação com o gabarito conhecido.
+3. Use **Outro exemplo** para continuar explorando. Os casos de erro mostram por que um alerta precisa de revisão humana.
+
+O índice vai de 0 a 100 e corresponde ao score multiplicado por 100; não é uma probabilidade calibrada. O corte padrão é 50. A edição dos 30 dados e o ajuste do corte ficam em opções recolhidas. Ao editar um exemplo, o gabarito deixa de valer.
+
+Para analisar várias transações, escolha **Enviar um CSV**. É possível baixar um arquivo de exemplo, ver o resumo dos alertas e exportar todas as previsões com o número de cada linha de dados (sem contar o cabeçalho).
+
+**Como funciona** explica a análise em três etapas. **Resultados do modelo** apresenta os acertos e erros em linguagem simples, com os experimentos e as métricas completas em uma seção expansível.
+
 **Não é necessário baixar a base nem retreinar para usar a aplicação.** Modelo e
 exemplos estão incluídos. Após instalar dependências, a inferência funciona sem
 internet. O servidor é local, em `127.0.0.1`, sem debug. Não há deploy público.

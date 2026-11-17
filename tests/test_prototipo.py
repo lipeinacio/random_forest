@@ -46,6 +46,19 @@ class PrototypeTests(unittest.TestCase):
         self.assertEqual(r.status_code,400)
         self.assertIn('Class',r.get_json()['error'])
 
+    def test_example_truth_stays_separate_from_model_inputs(self):
+        response=self.client.get('/api/info')
+        self.assertEqual(response.status_code,200)
+        examples=response.get_json()['examples']
+        truth=pd.read_csv(ROOT/'demo'/'gabarito_final.csv')
+        self.assertEqual(len(examples),len(truth))
+        for example,(_,expected) in zip(examples,truth.iterrows()):
+            self.assertEqual(example['actual'],int(expected.Class))
+            self.assertNotIn('Class',example['row'])
+            predicted=infer(pd.DataFrame([example['row']]),bundle=self.bundle).iloc[0]
+            correct=int(predicted.classe_prevista)==example['actual']
+            self.assertEqual(correct,example['kind'] not in ('FN','FP'))
+
     def test_duplicate_headers_and_invalid_threshold(self):
         r=self.client.post('/api/predict',data={'csv':(io.BytesIO(b'Time,Time\n1,2'),'duplicado.csv')})
         self.assertEqual(r.status_code,400)

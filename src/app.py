@@ -31,11 +31,15 @@ def info():
     examples = []
     for i,row in data.iterrows():
         label = f'Exemplo {i+1}'
+        actual = None
+        kind = 'exemplo'
         if truth is not None:
             t=truth.iloc[i]
+            actual = int(t.Class)
+            kind = str(t.tipo) if t.tipo != 'acerto' else ('fraude' if actual else 'normal')
             label += f" · {'fraude' if t.Class else 'normal'} no gabarito"
             if t.tipo != 'acerto': label += f' · erro {t.tipo}'
-        examples.append({'name':label,'row':row.to_dict()})
+        examples.append({'name':label,'row':row.to_dict(), 'actual':actual, 'kind':kind})
     return jsonify({'features':FEATURES, 'configuration':BUNDLE.get('configuration','checkpoint_1'),
                     'threshold':BUNDLE['threshold'], 'conclusion':conclusion, 'experiments':exp,'examples':examples})
 
